@@ -2,7 +2,7 @@
  * On page load, pick the appropriate random background image
  * based on the current viewport orientation (width vs height).
  */
-window.addEventListener("load", function () {
+document.addEventListener("DOMContentLoaded", function () {
     setRandomBackground();
 });
 
