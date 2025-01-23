@@ -56,6 +56,7 @@ footer {
     text-align: center;
     font-size: 0.8em;
     color: grey;
+    text-shadow: 0.25px 0.25px #000000;
 }
 
 /* --- Index Page Specific --- */
@@ -122,8 +123,8 @@ footer {
 /* --- Minecraft Style Button Example (optional or as needed) --- */
 .mc-button {
     display: inline-block;
-    height: 2em;
-    width: 10em;
+    height: 8vh;
+    width: 30vh;
     cursor: pointer;
     overflow: hidden;
     white-space: nowrap;
@@ -136,18 +137,21 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Minecraft', sans-serif;
 }
 
 .mc-button .title {
     height: 100%;
-    color: #ddd;
-    text-shadow: 2px 2px #000a;
+    color: #000;
+    /*text-shadow: 1px 1px #000a;*/
+    font-size: 3vh;
     width: 100%;
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: inset -2px -4px #0006, inset 2px 2px #fff7;
+    font-family: 'Minecraft', sans-serif;
 }
 
 .mc-button:hover .title {
