@@ -25,7 +25,7 @@ function setRandomBackground() {
 
     const randomIndex = Math.floor(Math.random() * 6) + 1; // 1 to 6
     const bgDiv = document.getElementById("bg");
-    bgDiv.style.backgroundImage = `url('/walls/${folder}/${randomIndex}.png')`;
+    bgDiv.style.backgroundImage = `url('/walls/${folder}/${randomIndex}.webp')`;
 }
 
 /**
