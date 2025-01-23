@@ -1,0 +1,155 @@
+/* --- Global Resets & Non-Scrollable Layout --- */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Prevent scrolling */
+    font-family: sans-serif; /* Fallback font */
+    color: #fff; /* Default text color */
+}
+
+/* --- Blurred Background Container --- */
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    filter: blur(1px); /* 20% blur, approximate with 20px or adjust as needed */
+    z-index: -9999;
+}
+
+/* --- Header (Logo & Sold Separately) --- */
+header {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#dongleLogo {
+    width: 80vmin; /* Scales with viewport dimension so it looks similar on mobile & desktop */
+    height: auto;
+    cursor: pointer;
+    user-select: none;
+}
+
+#soldSeparately {
+    font-size: 2vmin;
+    color: #fff;
+    text-shadow: -1px 0 #000,
+    1px 0 #000,
+    0 -1px #000,
+    0 1px #000;
+    margin-top: 0.5vmin;
+}
+
+/* --- Footer Watermark --- */
+footer {
+    position: absolute;
+    bottom: 0.5em;
+    width: 100%;
+    text-align: center;
+    font-size: 0.8em;
+    color: grey;
+}
+
+/* --- Index Page Specific --- */
+#indexContent {
+    position: absolute;
+    top: 66%; /* 2/3 down the page */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* A single mc-button for the instructions link */
+#instructionsButton {
+    margin: 0 auto;
+}
+
+/* --- Instructions Page Specific --- */
+#instructionsBox {
+    position: absolute;
+    bottom: 5vw;
+    /* from bottom of the display to 3/5 (~60%) up from the bottom => top = 40% */
+    top: 40vh;
+    left: 5vw;
+    right: 5vw;
+    overflow: hidden;
+    background-color: #fff;
+    color: #000; /* text inside instructions box is black by default */
+    border: 1px solid #000;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* So text is in the middle vertically */
+}
+
+#instructionsBox h1 {
+    position: relative;
+    font-weight: bold;
+    text-decoration: underline;
+    margin: 0 0;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#instructionsBox p {
+    position: relative;
+    font-size: 1em;
+    line-height: 1.5em;
+    margin: 0 0;
+    width: fit-content; /* Keep text centered nicely */
+    height:fit-content;
+    color: #000;
+    bottom: -20vmin;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* --- Minecraft Style Button Example (optional or as needed) --- */
+.mc-button {
+    display: inline-block;
+    height: 2em;
+    width: 10em;
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    user-select: none;
+    background: #999 url("https://i.ibb.co/rb2TWXL/bgbtn.png") center / cover;
+    border: 2px solid #000;
+    margin: 0.5em;
+
+    /* Center the text inside the button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mc-button .title {
+    height: 100%;
+    color: #ddd;
+    text-shadow: 2px 2px #000a;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset -2px -4px #0006, inset 2px 2px #fff7;
+}
+
+.mc-button:hover .title {
+    background-color: rgba(100, 100, 255, 0.45);
+    color: #FFFFA0;
+    text-shadow: 2px 2px #202013cc;
+}
+
+.mc-button:active .title {
+    box-shadow: inset -2px -4px #0004, inset 2px 2px #fff5;
+}

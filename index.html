@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>DongleCraft</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+
+<!-- Fixed blurred background container -->
+<div id="bg"></div>
+
+<!-- Foreground elements -->
+<header>
+    <img
+            id="dongleLogo"
+            src="dongleCraft.png"
+            alt="DongleCraft"
+            onclick="redirectHome()"
+    />
+    <div id="soldSeparately">(Sold Separately)</div>
+</header>
+
+<!-- Main content (the button 2/3 down the page) -->
+<div id="indexContent">
+    <!-- Example MC-style button -->
+    <div class="mc-button" id="instructionsButton" onclick="goInstructions()">
+        <div class="title">Instructions</div>
+    </div>
+</div>
+
+<!-- Small watermark at bottom -->
+<footer>
+    &copy; TrueProblematic
+</footer>
+
+</body>
+</html>
